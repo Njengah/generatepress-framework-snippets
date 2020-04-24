@@ -1,9 +1,11 @@
 <?php 
 
-add_action( 'add_meta_boxes', 'generate_register_custom_meta_box' );
 /**
  * Generate a custom metabox
  */
+ 
+add_action( 'add_meta_boxes', 'generate_register_custom_meta_box' );
+
 function generate_register_custom_meta_box() {
 	if ( ! current_user_can( apply_filters( 'generate_metabox_capability', 'edit_theme_options' ) ) ) {
 		return;
